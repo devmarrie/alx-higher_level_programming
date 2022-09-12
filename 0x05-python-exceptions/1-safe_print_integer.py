@@ -3,6 +3,7 @@
 def safe_print_integer(x):
     try:
        print("{x}:d".format())
-       print("")
+       return(True)
     except (TypeError, ValueError):
         print("{} is not an integer".format(x))
+        return(False)
