@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-def safe_print_integer(x):
+def safe_print_integer(value):
     try:
-       print("{x}:d".format())
+       print("{:d}".format(value))
        return(True)
     except (TypeError, ValueError):
-        print("{} is not an integer".format(x))
+        print("{} is not an integer".format(value))
         return(False)
