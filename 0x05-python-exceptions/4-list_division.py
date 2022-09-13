@@ -15,9 +15,6 @@ def list_division(my_list_1, my_list_2, list_length):
         except IndexError:
             print("Out of range")
             out = 0
-        except:
-            print("Items cannot be divided")
-            out = 0
         finally:
             new_list.append(out)
     return(new_list)    
