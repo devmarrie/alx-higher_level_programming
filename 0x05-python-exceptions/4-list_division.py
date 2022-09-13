@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-from decimal import DivisionByZero
-
 
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
@@ -11,7 +9,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except TypeError:
             print("Wrong type")
             out = 0
-        except DivisionByZero:
+        except ZeroDivisionError:
             print("division by 0")
             out = 0
         except IndexError:
