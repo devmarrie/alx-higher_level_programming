@@ -7,3 +7,4 @@ def safe_print_division(a, b):
         print("Division by zero")
     finally:
        print("Inside result:{}".format(div))
+       return(div)
