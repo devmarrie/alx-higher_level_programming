@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Define a class Square."""
 
-
 class Square:
     """Represent a square."""
 
@@ -34,9 +33,7 @@ class Square:
     """Public instance method that print the square in stdout"""
     def my_print(self):
         for i in range (0,self.__size):
-           for j in self.__size:
-            print("#",end="")
-            print("")
+           [print("#",end="") for j in range(self.__size) ]
+           print("")
         if self.size == 0:
             print("")
-
