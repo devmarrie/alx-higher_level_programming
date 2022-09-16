@@ -33,7 +33,10 @@ class Square:
     
     """Public instance method that print the square in stdout"""
     def my_print(self):
-        print("{},#".format(self.area()))
+        for i in range (0,self.__size):
+           for j in self.__size:
+            print("#",end="")
+            print("")
         if self.size == 0:
             print("")
 
