@@ -4,7 +4,9 @@
 class Square:
     """Instantiating our class using __init__"""
     def __init__(self, size=0):
-       """Testing the size input for errors and raising them"""
+       """Testing the size input 
+       for errors and 
+       raising them"""
        if not type(size) == int:
          raise TypeError("Size must be an integer")
        elif size < 0:
