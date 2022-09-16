@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Define a class Square."""
 
-from turtle import position
-
 
 class Square:
     """Represent a square."""
@@ -12,14 +10,15 @@ class Square:
 
         Args:
             size (int): The size of the new square.
+            position (int, int): The position of the new square.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
-    """Using a getter to retrive the size"""
     @property
     def size(self):
-        return self.__size  
+        """Get/set the current size of the square."""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
@@ -28,28 +27,25 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
 
-    """Retrive position"""
     @property
-    def position(self): 
-        self.__position
+    def position(self):
+        """Get/set the current position of the square."""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
-         if (not isinstance(value, tuple) or
+        if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-         self.__position = value
-    
+        self.__position = value
 
     def area(self):
         """Return the current area of the square."""
         return (self.__size * self.__size)
-    
-    """Public instance method that print the square in stdout"""
+
     def my_print(self):
         """Print the square with the # character."""
         if self.__size == 0:
