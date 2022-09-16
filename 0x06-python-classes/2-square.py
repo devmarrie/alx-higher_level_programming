@@ -11,13 +11,7 @@ class Square:
             raise ValueError("size must be >= 0")
        self.__size = size
 
-    """The area method enables us to access the private variable size and find its area"""
-    def area(self):
-        area = self.__size **2
-        print(area)
-
-s = Square(4)
-s.area()
+   
 
 
 
