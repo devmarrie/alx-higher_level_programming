@@ -1,6 +1,7 @@
 #!/bin/usr/python3
 
-"""Defining a class as the blueprint of all the objects we shall define"""
+"""Defining a class as the blueprint 
+of all the objects we shall define"""
 class Square:
     """Instantiating our class using __init__"""
 
