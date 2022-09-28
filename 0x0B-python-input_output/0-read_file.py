@@ -10,6 +10,6 @@ def read_file(filename=""):
     and close it  using closed() due to with keyword
 
     """
-    with open(filename,encoding="utf_8") as f:
-        f.read()
+    with open(filename,encoding="utf-8") as f:
+        print(f.read(), end="")
         f.closed
