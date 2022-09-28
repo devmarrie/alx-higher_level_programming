@@ -8,4 +8,4 @@ def lookup(obj):
     """
     We use the dir() method which returns a list containing strings
     """
-    print(dir(obj))   
+    return dir(obj)   
