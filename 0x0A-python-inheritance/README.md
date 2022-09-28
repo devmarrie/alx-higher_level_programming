@@ -1,4 +1,4 @@
->Inharitance is the ability of a class to pick the attributes of another class and use them as its own.The class which is being inherited from is defined as the *parent, base or super class* while the class which inherits is defined as the *sub class, derived class  or the child class*.Below is the syntax for inheritance in python.
+>Inheritance is the ability of a class to pick the attributes of another class and use them as its own.The class which is being inherited from is defined as the *parent, base or super class* while the class which inherits is defined as the *sub class, derived class  or the child class*.Below is the syntax for inheritance in python.
 
 ```
 class ChildClass(ParentClass):
@@ -47,5 +47,5 @@ class DerivedClass(BaseClass1, BaseClass2, BaseClass3):
 
 >If we do not inherit from any class, just as a single class implementation is , the class is bound to inherit from the  object  it creates after instaniation.
 
-####The super function
+#### The super function
 >This magic method calls the method in the parent class.It can be called inside any method but mostly called in the  __init__  method.It enables one to avoid redundant code. 
