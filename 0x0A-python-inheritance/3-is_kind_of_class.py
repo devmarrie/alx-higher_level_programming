@@ -3,7 +3,15 @@
 """Prints is true if an object is an instance of a class or an inherited class"""
 
 def is_kind_of_class(obj, a_class):
-    if isinstance(obj, a_class):
-       """So long as the class is defined the object will always ingherit from the class"""
+     """
+        Args:
+        obj (any): The object to check.
+        a_class (type): The class to match the type of obj to.
+        Returns:
+        If obj is an instance or inherited instance of a_class - True.
+        Otherwise - False.
+    
+     """
+     if isinstance(obj, a_class):
        return True
-    return False
+     return False
