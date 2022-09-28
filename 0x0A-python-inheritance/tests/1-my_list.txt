@@ -1,0 +1,49 @@
+Confirming the module is imported:
+         >>> m = __import__("1-my_list").__doc__
+         >>> len(m) > 1
+         True
+
+Confirming mylist inherits from list:
+          >>> issubclass(MyList, list)
+          True
+
+Confirming if MyList is indeed a class:
+          >>> cls = __import__("1-my_list").MyList.__doc__
+          >>> len(cls) > 1
+          True
+
+Confirming if the print_method exists:
+          >>> mtd = __import__("1-my_list").MyList.print_sorted.__doc__
+          >>> len(mtd) > 1
+          True
+
+Confirming if an instance can be created
+          >>> lst = MyList()
+          >>> isinstance(lst, MyList)
+          True
+
+Confirming if it can print an empty list
+          >>> l = MyList()
+          >>> l.print_sorted()
+          []
+
+Confirming if appending works
+          >>> l.append(5)
+          >>> l.append(9)
+          >>> l.append(7)
+          >>> l.append(4)
+          print(l) 
+          [5,9,7,4]
+
+Confirming if the sorting method works
+          >>> l.print_sorted()
+          [4,5,7,9]
+
+
+
+
+
+
+       
+
+
