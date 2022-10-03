@@ -24,10 +24,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self,width):
-        if width <= 0:
-            raise ValueError("width must be > 0")
         self.__width = width
-
 
     """
     height getter and setter
@@ -39,10 +36,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self,height):
-        if height <= 0:
-            raise ValueError("height must be > 0")
         self.__height = height
-
 
     """
     x getter and setter
@@ -54,9 +48,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self,x):
-       if x <= 0:
-            raise ValueError("x must be > 0")
-       self.__x = x
+        self.__x = x
+
     """
     y getter and setter
     They retrieve the y and change it respectively
@@ -67,12 +60,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self,y):
-        if y <= 0:
-            raise ValueError("y must be > 0")
         self.__y = y
     
     """
     Calling the super method which calls the id from the main class
     """
     super().__init__(id)
-
