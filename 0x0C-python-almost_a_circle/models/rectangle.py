@@ -4,6 +4,7 @@ import the Base class
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
@@ -13,6 +14,11 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+        """
+        Calling the super method which calls the id from the main class
+        """
+        super().__init__(id)
+
 
     """
     Width getter and setter
@@ -23,8 +29,12 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self,width):
-        self.__width = width
+    def width(self, width):
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("<name of the attribute> must be > 0")
+        self.width = width
 
     """
     height getter and setter
@@ -35,8 +45,12 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self,height):
-        self.__height = height
+    def height(self, height):
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("<name of the attribute> must be > 0")
+        self.height = height
 
     """
     x getter and setter
@@ -47,9 +61,12 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self,x):
-        self.__x = x
-
+    def x(self, x):
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        if x <= 0:
+            raise ValueError("x must be >= 0")
+        self.x = x
     """
     y getter and setter
     They retrieve the y and change it respectively
@@ -59,10 +76,11 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self,y):
-        self.__y = y
+    def y(self, y):
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        if y <= 0:
+            raise ValueError("y must be >= 0")
+        self.y = y
+
     
-    """
-    Calling the super method which calls the id from the main class
-    """
-    super().__init__(id)
