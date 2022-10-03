@@ -87,7 +87,7 @@ class Rectangle(Base):
     Creating a method that calculates the area
     """
     def area(self):
-        return self.__width * self.__width
+        return self.width * self.width
 
     """
     Printing the rectangle instance
@@ -95,6 +95,13 @@ class Rectangle(Base):
     def display(self):
         if self.width == 0 or self.height == 0:
             print("")
-        for i in range(self.__height):
-            for j in range(self.__width):
+        for i in self.height:
+            for j in self.width:
                 print("#",end="")
+    """
+    overriding the __str__ method so that it returns
+     [Rectangle] (<id>) <x>/<y> - <width>/<height>
+    """
+    def __str__(self):
+         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+         self.x,self.y,self.width,self.height)
