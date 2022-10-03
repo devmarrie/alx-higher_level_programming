@@ -95,6 +95,6 @@ class Rectangle(Base):
     def display(self):
         if self.width == 0 or self.height == 0:
             print("")
-        for i in self.__height:
-            for j in self.__width:
+        for i in range(self.__height):
+            for j in range(self.__width):
                 print("#",end="")
