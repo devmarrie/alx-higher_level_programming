@@ -66,3 +66,5 @@ class Rectangle(Base):
     Calling the super method which calls the id from the main class
     """
     super().__init__(id)
+
+    
