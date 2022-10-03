@@ -95,8 +95,12 @@ class Rectangle(Base):
     def display(self):
         if self.width == 0 or self.height == 0:
             print("")
-        for i in self.height:
-            for j in self.width:
+
+        """considering x and y"""
+        [print("") for y in range(self.y)]
+        for i in range(self.height):
+            [print("") for x in range(self.x)]
+            for j in range(self.width):
                 print("#",end="")
     """
     overriding the __str__ method so that it returns
