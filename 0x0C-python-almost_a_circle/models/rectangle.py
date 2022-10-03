@@ -120,6 +120,12 @@ class Rectangle(Base):
         This type of argument is called a “no-keyword argument”
          - Argument order is super important.
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-        self.width,self.height,self.x,self.y)
+        list(*args)
+        self.id = args[0]
+        self.width = args[1]
+        self.height = args[2]
+        self.x = args[3]
+        self.y = args[4]
 
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+         self.width,self.height,self.x,self.y)
