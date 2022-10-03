@@ -110,7 +110,7 @@ class Rectangle(Base):
          return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
          self.x,self.y,self.width,self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         1st argument should be the id attribute
         2nd argument should be the width attribute
@@ -119,13 +119,19 @@ class Rectangle(Base):
         5th argument should be the y attribute
         This type of argument is called a “no-keyword argument”
          - Argument order is super important.
+         **kwargs can be thought of as a double pointer to a dictionary: key/value
+         **kwargs must be skipped if *args exists and is not empty
         """
-        list(*args)
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        if args is not None:
+            list(args)
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-         self.width,self.height,self.x,self.y)
+            print ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                             self.width,self.height,self.x,self.y))
+        elif kwargs is not None:
+            for key,value in kwargs.items():
+                print("{}:{}".format(key,value))
