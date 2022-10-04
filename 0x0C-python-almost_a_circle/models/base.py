@@ -33,4 +33,18 @@ class Base():
         """
         json.dumps(list_dictionaries)
 
+    """
+    Writting a json representation to a file using json.dump
+    It takes in two argments , the file and what is to be dumped.
+    This is a class method since it takes the class as the first argument
+    """
+    @classmethod
+    def save_to_file(cls, list_objs):
+        filename = cls.__name__ + ".json"
+        with open(filename,"w") as f:
+            if list_objs is None:
+                f.write("[]")
+            f.write(Base.to_json_string(list_objs))
+
+
              
