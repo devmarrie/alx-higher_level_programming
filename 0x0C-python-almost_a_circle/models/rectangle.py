@@ -142,9 +142,10 @@ class Rectangle(Base):
     def to_dictionary(self):
         r_dic ={
             "id": self.id,
-            "size": self.width,
+            "width": self.width,
+            "height":self.height,
             "x": self.x,
             "y": self.y
            }
         return r_dic
-        
+
