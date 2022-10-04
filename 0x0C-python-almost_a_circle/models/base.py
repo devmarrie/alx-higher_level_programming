@@ -3,6 +3,9 @@
 """
 Defining a class Base.
 """
+import json
+
+
 class Base():
     """
     A private class variable  __nb_objects
@@ -18,5 +21,16 @@ class Base():
             """
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+    """
+    Static methods
+    """
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None and list_dictionaries == []:
+            return "[]"
+        """
+        Decerialise the list
+        """
+        json.dumps(list_dictionaries)
 
              
