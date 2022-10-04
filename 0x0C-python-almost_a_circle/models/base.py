@@ -5,6 +5,8 @@ Defining a class Base.
 """
 import json
 
+from models.square import Square
+
 
 class Base():
     """
@@ -55,6 +57,29 @@ class Base():
         if json_string is None and json_string == "[]":
             return []
         json.loads(json_string)
+
+    """
+    class method that returns an instance with all attributes already set
+    """
+    @classmethod
+    def create(cls, **dictionary):
+        sq = Square(12,1,2,6)
+        sq.update(**dictionary)
+    
+    """
+    Returns a list of all instances
+    """
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        try:
+            f = open(filename)
+            lst = Base.from_json_string(f.read())
+            return [Base.create(**lst)]
+        except FileNotFoundError:
+            return []
+
+
         
 
 
