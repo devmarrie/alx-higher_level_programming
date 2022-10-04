@@ -46,5 +46,16 @@ class Base():
                 f.write("[]")
             f.write(Base.to_json_string(list_objs))
 
+    """
+    A static method behaves like a normal method and does not pass an instance or a class
+    We use the json.loads() method to convert to string
+    """
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None and json_string == "[]":
+            return []
+        json.loads(json_string)
+        
+
 
              
