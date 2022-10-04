@@ -41,4 +41,16 @@ class Square(Rectangle):
             for key,value in kwargs:
                 print("{}:{}".format(key,value))
         return ("[Square] ({}) {}/{} - {}".format(self.id,self.width,self.x,self.y))
+
+    """
+    Adding a dictonary defination.
+    """
+    def to_dictionary(self):
+        s_dic = {
+            "id":self.id,
+            "size":self.width,
+            "x":self.x,
+            "y":self.y
+        }
+        return s_dic
         
