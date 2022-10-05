@@ -33,7 +33,7 @@ class Rectangle(Base):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width <= 0:
-            raise ValueError("<name of the attribute> must be > 0")
+            raise ValueError("width must be > 0")
         self.width = width
 
     """
@@ -87,21 +87,22 @@ class Rectangle(Base):
     Creating a method that calculates the area
     """
     def area(self):
-        return self.width * self.width
+        return self.width * self.height
 
     """
     Printing the rectangle instance
     """
     def display(self):
+        """Print the Rectangle using the `#` character."""
         if self.width == 0 or self.height == 0:
             print("")
+            return
 
-        """considering x and y"""
         [print("") for y in range(self.y)]
-        for i in range(self.height):
-            [print("") for x in range(self.x)]
-            for j in range(self.width):
-                print("#",end="")
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
     """
     overriding the __str__ method so that it returns
      [Rectangle] (<id>) <x>/<y> - <width>/<height>
@@ -140,12 +141,12 @@ class Rectangle(Base):
     returns the dictionary representation of a Rectangle    
     """
     def to_dictionary(self):
-        r_dic ={
+        return {
             "id": self.id,
             "width": self.width,
             "height":self.height,
             "x": self.x,
             "y": self.y
            }
-        return r_dic
+
 
