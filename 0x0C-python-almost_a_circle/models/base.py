@@ -6,7 +6,6 @@ Defining a class Base.
 import csv
 import json
 import turtle
-from square import Square
 
 
 class Base():
@@ -17,7 +16,7 @@ class Base():
     def __init__(self, id=None):
         self.id = id
         if self.id is not None:
-            return self.id
+            self.id
         else:
             """
             Increment the base class and retrn it as the new id
@@ -64,8 +63,18 @@ class Base():
     """
     @classmethod
     def create(cls, **dictionary):
-        sq = Square(12,1,2,6)
-        sq.update(**dictionary)
+        """Return a class instantiated from a dictionary of attributes.
+
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize.
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
     
     """
     Returns a list of all instances
@@ -160,6 +169,8 @@ class Base():
         turtle.exitonclick()
 
         
+
+
 
 
              
