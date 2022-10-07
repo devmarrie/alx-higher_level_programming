@@ -34,6 +34,7 @@ class Rectangle(Base):
     """
     Width getter and setter
     They retrieve the width and change it respectively
+    by adding validation of all setter methods and instantiation (id excluded)
     """
     @property
     def width(self):
@@ -50,6 +51,7 @@ class Rectangle(Base):
     """
     height getter and setter
     They retrieve the height and change it respectively
+    by adding validation of all setter methods and instantiation (id excluded)
     """
     @property
     def height(self):
@@ -66,6 +68,7 @@ class Rectangle(Base):
     """
     x getter and setter
     They retrieve the x and change it respectively
+    by adding validation of all setter methods and instantiation (id excluded)
     """
     @property
     def x(self):
@@ -81,6 +84,7 @@ class Rectangle(Base):
     """
     y getter and setter
     They retrieve the y and change it respectively
+    by adding validation of all setter methods and instantiation (id excluded)
     """
     @property
     def y(self):
@@ -96,15 +100,18 @@ class Rectangle(Base):
 
     """
     Creating a method that calculates the area
+    returns the area value of the Rectangle instance.
     """
     def area(self):
         return self.width * self.height
 
     """
     Printing the rectangle instance
+    that prints in stdout the Rectangle instance with the character #
+    you don’t need to handle x and y
+    We now take care of x and y
     """
     def display(self):
-        """Print the Rectangle using the `#` character."""
         if self.width == 0 or self.height == 0:
             print("")
             return
