@@ -1,4 +1,18 @@
+#!/usr/bin/python3
+"""Defines unittests for models/rectangle.py.
 
+Unittest classes:
+    TestRectangle_instantiation 
+    TestRectangle_width 
+    TestRectangle_height 
+    TestRectangle_x
+    TestRectangle_y 
+    TestRectangle_order_of_initialization 
+    TestRectangle_area 
+    TestRectangle_update_args 
+    TestRectangle_update_kwargs 
+    TestRectangle_to_dictionary 
+"""
 import unittest
 
 from models.base import Base
