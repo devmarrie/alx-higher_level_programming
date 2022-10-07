@@ -14,8 +14,14 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
-"""testing the base class method"""
+"""
+testing the base class method
+this is the main class that all the other class inherit from 
+"""
 class TestBase(unittest.TestCase):
+    """
+    Adding test to check if it icrements as it goes
+    """
     def test_add(self):
         b1 = Base()
         b2 = Base()
