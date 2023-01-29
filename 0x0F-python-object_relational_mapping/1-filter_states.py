@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """
 Lists all states with a name string
 Usage: ./1-filter_states.py <mysql username> \
